@@ -542,13 +542,13 @@ NSDictionary *_classesForNames = nil;
 						// extend font and paragraph style with the \n
 						[tmpString appendEndOfParagraph];
 					}
-					else
-					{
-						// string is empty, need a new attributed string so that we have the attributes
-						attributes = [self attributesForAttributedStringRepresentation];
-						NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"\n" attributes:attributes];
-						[tmpString appendAttributedString:attributedString];
-					}
+//					else
+//					{
+//						// string is empty, need a new attributed string so that we have the attributes
+//						attributes = [self attributesForAttributedStringRepresentation];
+//						NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"\n" attributes:attributes];
+//						[tmpString appendAttributedString:attributedString];
+//					}
 				}
 			}
 		}

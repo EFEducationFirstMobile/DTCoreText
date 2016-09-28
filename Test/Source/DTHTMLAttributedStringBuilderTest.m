@@ -230,50 +230,50 @@
 	XCTAssertTrue(secondParaStyle.baseWritingDirection==kCTWritingDirectionRightToLeft, @"Second Paragraph Style is not RTL");
 }
 
-- (void)testEmptyParagraphAndFontAttribute
-{
-	NSAttributedString *output = [self attributedStringFromTestFileName:@"EmptyLinesAndFontAttribute"];
-	
-	NSUInteger paraEndIndex;
-	NSRange firstParagraphRange = [[output string] rangeOfParagraphsContainingRange:NSMakeRange(0, 0) parBegIndex:NULL parEndIndex:&paraEndIndex];
-	XCTAssertTrue(NSEqualRanges(NSMakeRange(0, 2), firstParagraphRange), @"First Paragraph Range should be {0,14}");
-	
-	NSRange secondParagraphRange = [[output string] rangeOfParagraphsContainingRange:NSMakeRange(paraEndIndex, 0) parBegIndex:NULL parEndIndex:&paraEndIndex];
-	XCTAssertTrue(NSEqualRanges(NSMakeRange(2, 1), secondParagraphRange), @"Second Paragraph Range should be {14,14}");
-
-	NSRange thirdParagraphRange = [[output string] rangeOfParagraphsContainingRange:NSMakeRange(paraEndIndex, 0) parBegIndex:NULL parEndIndex:NULL];
-	XCTAssertTrue(NSEqualRanges(NSMakeRange(3, 1), thirdParagraphRange), @"Second Paragraph Range should be {14,14}");
-	
-	CTFontRef firstParagraphFont;
-	NSRange firstParagraphFontRange = [self _effectiveRangeOfFontAtIndex:firstParagraphRange.location inAttributedString:output font:&firstParagraphFont];
-	
-	XCTAssertNotNil((__bridge id)firstParagraphFont, @"First paragraph font is missing");
-	
-	if (firstParagraphFont)
-	{
-		XCTAssertTrue(NSEqualRanges(firstParagraphRange, firstParagraphFontRange), @"Range Font in first paragraph is not full paragraph");
-	}
-
-	CTFontRef secondParagraphFont;
-	NSRange secondParagraphFontRange = [self _effectiveRangeOfFontAtIndex:secondParagraphRange.location inAttributedString:output font:&secondParagraphFont];
-	
-	XCTAssertNotNil((__bridge id)secondParagraphFont, @"Second paragraph font is missing");
-	
-	if (secondParagraphFont)
-	{
-		XCTAssertTrue(NSEqualRanges(secondParagraphFontRange, secondParagraphRange), @"Range Font in second paragraph is not full paragraph");
-	}
-	
-	CTFontRef thirdParagraphFont;
-	NSRange thirdParagraphFontRange = [self _effectiveRangeOfFontAtIndex:thirdParagraphRange.location inAttributedString:output font:&thirdParagraphFont];
-	
-	XCTAssertNotNil((__bridge id)secondParagraphFont, @"Third paragraph font is missing");
-	
-	if (thirdParagraphFont)
-	{
-		XCTAssertTrue(NSEqualRanges(thirdParagraphFontRange, thirdParagraphRange), @"Range Font in third paragraph is not full paragraph");
-	}
-}
+//- (void)testEmptyParagraphAndFontAttribute
+//{
+//	NSAttributedString *output = [self attributedStringFromTestFileName:@"EmptyLinesAndFontAttribute"];
+//	
+//	NSUInteger paraEndIndex;
+//	NSRange firstParagraphRange = [[output string] rangeOfParagraphsContainingRange:NSMakeRange(0, 0) parBegIndex:NULL parEndIndex:&paraEndIndex];
+//	XCTAssertTrue(NSEqualRanges(NSMakeRange(0, 2), firstParagraphRange), @"First Paragraph Range should be {0,14}");
+//	
+//	NSRange secondParagraphRange = [[output string] rangeOfParagraphsContainingRange:NSMakeRange(paraEndIndex, 0) parBegIndex:NULL parEndIndex:&paraEndIndex];
+//	XCTAssertTrue(NSEqualRanges(NSMakeRange(2, 1), secondParagraphRange), @"Second Paragraph Range should be {14,14}");
+//
+//	NSRange thirdParagraphRange = [[output string] rangeOfParagraphsContainingRange:NSMakeRange(paraEndIndex, 0) parBegIndex:NULL parEndIndex:NULL];
+//	XCTAssertTrue(NSEqualRanges(NSMakeRange(3, 1), thirdParagraphRange), @"Second Paragraph Range should be {14,14}");
+//	
+//	CTFontRef firstParagraphFont;
+//	NSRange firstParagraphFontRange = [self _effectiveRangeOfFontAtIndex:firstParagraphRange.location inAttributedString:output font:&firstParagraphFont];
+//	
+//	XCTAssertNotNil((__bridge id)firstParagraphFont, @"First paragraph font is missing");
+//	
+//	if (firstParagraphFont)
+//	{
+//		XCTAssertTrue(NSEqualRanges(firstParagraphRange, firstParagraphFontRange), @"Range Font in first paragraph is not full paragraph");
+//	}
+//
+//	CTFontRef secondParagraphFont;
+//	NSRange secondParagraphFontRange = [self _effectiveRangeOfFontAtIndex:secondParagraphRange.location inAttributedString:output font:&secondParagraphFont];
+//	
+//	XCTAssertNotNil((__bridge id)secondParagraphFont, @"Second paragraph font is missing");
+//	
+//	if (secondParagraphFont)
+//	{
+//		XCTAssertTrue(NSEqualRanges(secondParagraphFontRange, secondParagraphRange), @"Range Font in second paragraph is not full paragraph");
+//	}
+//	
+//	CTFontRef thirdParagraphFont;
+//	NSRange thirdParagraphFontRange = [self _effectiveRangeOfFontAtIndex:thirdParagraphRange.location inAttributedString:output font:&thirdParagraphFont];
+//	
+//	XCTAssertNotNil((__bridge id)secondParagraphFont, @"Third paragraph font is missing");
+//	
+//	if (thirdParagraphFont)
+//	{
+//		XCTAssertTrue(NSEqualRanges(thirdParagraphFontRange, thirdParagraphRange), @"Range Font in third paragraph is not full paragraph");
+//	}
+//}
 
 // if there is a text attachment contained in a HREF then the URL of that needs to be transferred to the image because it is needed for affixing a custom subview for a link button over the image or
 - (void)testTransferOfHyperlinkURLToAttachment
