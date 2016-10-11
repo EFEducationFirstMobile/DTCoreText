@@ -14,9 +14,33 @@
 {
 	@synchronized(self)
 	{
+		if([self _isChildOfList]) {
+			return nil;
+		}
+		
 		NSDictionary *attributes = [self attributesForAttributedStringRepresentation];
 		return [[NSAttributedString alloc] initWithString:UNICODE_LINE_FEED attributes:attributes];
 	}
+}
+
+- (BOOL)_isChildOfList
+{
+	DTHTMLElement *parent = self.parentElement;
+	
+	if (parent.displayStyle == DTHTMLElementDisplayStyleListItem)
+	{
+		return YES;
+	}
+	
+	if (parent.displayStyle == DTHTMLElementDisplayStyleBlock)
+	{
+		if ([parent.name isEqualToString:@"ol"] || [parent.name isEqualToString:@"ul"])
+		{
+			return YES;
+		}
+	}
+	
+	return NO;
 }
 
 @end
