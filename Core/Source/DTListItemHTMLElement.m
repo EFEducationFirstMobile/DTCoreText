@@ -292,10 +292,10 @@
 - (NSAttributedString *)attributedString
 {
 	NSMutableAttributedString *tmpString = [[NSMutableAttributedString alloc] init];
-
+	
 	// append child elements
 	NSAttributedString *childrenString = [super attributedString];
-
+	
 	// append list prefix
 	NSAttributedString *listPrefix = [self _listPrefix];
 	
@@ -303,11 +303,15 @@
 	{
 		[tmpString appendAttributedString:listPrefix];
 		
-		// add NL if there is immediately another list prefix following
-		NSString *field = [childrenString attribute:DTFieldAttribute atIndex:0 effectiveRange:NULL];
-		
-		if ([field isEqualToString:DTListPrefixField])
-		{
+		if(childrenString.length > 0) {
+			// add NL if there is immediately another list prefix following
+			NSString *field = [childrenString attribute:DTFieldAttribute atIndex:0 effectiveRange:NULL];
+			
+			if ([field isEqualToString:DTListPrefixField])
+			{
+				[tmpString appendEndOfParagraph];
+			}
+		} else {
 			[tmpString appendEndOfParagraph];
 		}
 	}
