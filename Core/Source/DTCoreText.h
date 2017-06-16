@@ -61,6 +61,7 @@
 #import "DTImageTextAttachment.h"
 #import "DTObjectTextAttachment.h"
 #import "DTVideoTextAttachment.h"
+#import "CTXGapFillTextAttachment.h"
 
 // These classes only work with UIKit on iOS
 #if TARGET_OS_IOS

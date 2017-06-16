@@ -15,6 +15,7 @@
 #import "DTObjectTextAttachment.h"
 #import "DTVideoTextAttachment.h"
 #import "NSCoder+DTCompatibility.h"
+#import "CTXGapFillTextAttachment.h"
 
 #import <DTFoundation/DTLog.h>
 
@@ -51,6 +52,9 @@ static NSMutableDictionary *_classForTagNameLookup = nil;
 	[DTTextAttachment registerClass:[DTVideoTextAttachment class] forTagName:@"video"];
 	[DTTextAttachment registerClass:[DTIframeTextAttachment class] forTagName:@"iframe"];
 	[DTTextAttachment registerClass:[DTObjectTextAttachment class] forTagName:@"object"];
+    
+    [DTTextAttachment registerClass:[CTXGapFillTextAttachment class] forTagName:@"mark"];
+    [DTTextAttachment registerClass:[CTXGapFillTextAttachment class] forTagName:@"gapfill"];
 }
 
 + (DTTextAttachment *)textAttachmentWithElement:(DTHTMLElement *)element options:(NSDictionary *)options

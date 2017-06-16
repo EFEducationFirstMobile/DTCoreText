@@ -75,6 +75,8 @@ NSDictionary *_classesForNames = nil;
 	[tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"object"];
 	[tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"video"];
 	[tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"iframe"];
+    [tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"mark"];
+    [tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"gapfill"];
 	
 	_classesForNames = [tmpDict copy];
 }
@@ -127,8 +129,10 @@ NSDictionary *_classesForNames = nil;
 	{
 #if TARGET_OS_IPHONE
 		// need run delegate for sizing (only supported on iOS)
-		CTRunDelegateRef embeddedObjectRunDelegate = createEmbeddedObjectRunDelegate(_textAttachment);
-		[tmpDict setObject:CFBridgingRelease(embeddedObjectRunDelegate) forKey:(id)kCTRunDelegateAttributeName];
+        
+//      This breaks NSAttributedStrings's NSCoding
+//		CTRunDelegateRef embeddedObjectRunDelegate = createEmbeddedObjectRunDelegate(_textAttachment);
+//		[tmpDict setObject:CFBridgingRelease(embeddedObjectRunDelegate) forKey:(id)kCTRunDelegateAttributeName];
 #endif
 		
 		// add attachment
