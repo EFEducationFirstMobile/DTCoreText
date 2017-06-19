@@ -610,7 +610,14 @@
 				
 				// transfer the child nodes to the attachment
 				objectAttachment.childNodes = [_currentTag.childNodes copy];
-			}
+            }
+            else if([_currentTag.textAttachment isKindOfClass:[CTXGapFillTextAttachment class]])
+            {
+                CTXGapFillTextAttachment *objectAttachment = (CTXGapFillTextAttachment *)_currentTag.textAttachment;
+                
+                objectAttachment.uuid = _currentTag.attributes[@"key"];
+                objectAttachment.content = [[[_currentTag childNodes] firstObject] attributedString];
+            }
 		}
 	};
 	

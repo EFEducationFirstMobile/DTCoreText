@@ -8,6 +8,10 @@
 
 #import "DTTextAttachment.h"
 
-@interface CTXGapFillTextAttachment : DTTextAttachment <NSCoding>
+@interface CTXGapFillTextAttachment : DTTextAttachment
+
+@property (nonatomic, strong) NSString *uuid;
+
+@property (nonatomic, strong) NSAttributedString *content;
 
 @end
