@@ -615,7 +615,7 @@
             {
                 CTXGapFillTextAttachment *objectAttachment = (CTXGapFillTextAttachment *)_currentTag.textAttachment;
                 
-                objectAttachment.uuid = _currentTag.attributes[@"key"];
+                objectAttachment.uuid = (_currentTag.attributes[@"key"]?: [[NSUUID UUID] UUIDString]);
                 objectAttachment.content = [[[_currentTag childNodes] firstObject] attributedString];
             }
 		}
