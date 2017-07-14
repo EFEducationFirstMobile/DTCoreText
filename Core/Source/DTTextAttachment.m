@@ -80,6 +80,9 @@ static NSMutableDictionary *_classForTagNameLookup = nil;
 		_contentURL = [aDecoder decodeObjectForKey:@"contentURL"];
 		_attributes = [aDecoder decodeObjectForKey:@"attributes"];
 		_verticalAlignment = [aDecoder decodeIntegerForKey:@"verticalAlignment"];
+        _fontLeading = [aDecoder decodeFloatForKey:@"fontLeading"];
+        _fontAscent = [aDecoder decodeFloatForKey:@"fontAscent"];
+        _fontDescent = [aDecoder decodeFloatForKey:@"fontDescent"];
 	}
 	return self;
 }
@@ -91,6 +94,9 @@ static NSMutableDictionary *_classForTagNameLookup = nil;
 	[aCoder encodeObject:_contentURL forKey:@"contentURL"];
 	[aCoder encodeObject:_attributes forKey:@"attributes"];
 	[aCoder encodeInteger:_verticalAlignment forKey:@"verticalAlignment"];
+    [aCoder encodeFloat:_fontLeading forKey:@"fontLeading"];
+    [aCoder encodeFloat:_fontAscent forKey:@"fontAscent"];
+    [aCoder encodeFloat:_fontDescent forKey:@"fontDescent"];
 }
 
 - (id)initWithElement:(DTHTMLElement *)element options:(NSDictionary *)options

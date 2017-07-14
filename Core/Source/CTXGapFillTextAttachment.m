@@ -25,6 +25,7 @@ static const NSString *CTXGapFillTextAttachmentContentKey = @"CTXGapFillTextAtta
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
+    [super encodeWithCoder:aCoder];
     [aCoder encodeObject:self.uuid forKey:CTXGapFillTextAttachmentUUIDKey];
     [aCoder encodeObject:self.content forKey:CTXGapFillTextAttachmentContentKey];
 }
