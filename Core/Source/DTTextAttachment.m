@@ -55,6 +55,7 @@ static NSMutableDictionary *_classForTagNameLookup = nil;
     
     [DTTextAttachment registerClass:[CTXGapFillTextAttachment class] forTagName:@"mark"];
     [DTTextAttachment registerClass:[CTXGapFillTextAttachment class] forTagName:@"gapfill"];
+    [DTTextAttachment registerClass:[CTXGapFillTextAttachment class] forTagName:@"m"];
 }
 
 + (DTTextAttachment *)textAttachmentWithElement:(DTHTMLElement *)element options:(NSDictionary *)options

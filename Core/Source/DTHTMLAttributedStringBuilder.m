@@ -624,6 +624,7 @@
 	[_tagEndHandlers setObject:[objectBlock copy] forKey:@"object"];
     [_tagEndHandlers setObject:[objectBlock copy] forKey:@"mark"];
     [_tagEndHandlers setObject:[objectBlock copy] forKey:@"gapfill"];
+    [_tagEndHandlers setObject:[objectBlock copy] forKey:@"m"];
 
 	void (^videoBlock)(void) = ^
 	{

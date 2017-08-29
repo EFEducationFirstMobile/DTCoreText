@@ -22,6 +22,17 @@
 
 /* Begin PBXBuildFile section */
 		0DA7797F1C56965600796D4F /* DTCoreTextMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = A717BDE319E5A06C0024EF95 /* DTCoreTextMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1806B4CE1F541DAC005583DE /* CTXGapFillTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */; };
+		1806B4E51F541DBA005583DE /* CTXGapFillTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */; };
+		1806B4E61F541DBA005583DE /* CTXGapFillTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */; };
+		1806B4E71F541DBB005583DE /* CTXGapFillTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */; };
+		1806B4E81F541DBB005583DE /* CTXGapFillTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */; };
+		1806B4E91F541DBB005583DE /* CTXGapFillTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */; };
+		1806B4EA1F541DBB005583DE /* CTXGapFillTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */; };
+		1806B4EB1F541DBC005583DE /* CTXGapFillTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */; };
+		1806B4EC1F541DBC005583DE /* CTXGapFillTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */; };
+		1806B4ED1F541DBC005583DE /* CTXGapFillTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */; };
+		1806B4EE1F541DBC005583DE /* CTXGapFillTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -1126,6 +1137,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXGapFillTextAttachment.h; sourceTree = "<group>"; };
+		1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXGapFillTextAttachment.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* RTDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1749,6 +1762,8 @@
 		A788C90D14863E8700E1AFD9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1806B4CC1F541DAC005583DE /* CTXGapFillTextAttachment.h */,
+				1806B4CD1F541DAC005583DE /* CTXGapFillTextAttachment.m */,
 				A7675E6E172EA21E00C548CB /* Debug */,
 				A7949A4414CAF56300A8CCDE /* HTML Parsing */,
 				A7AE580A1725351B00A9BF61 /* HTML Writing */,
@@ -2135,6 +2150,7 @@
 				94D24B8C1D4AFE7800C7F33C /* NSCoder+DTCompatibility.h in Headers */,
 				94D24B8D1D4AFE7800C7F33C /* DTAttributedLabel.h in Headers */,
 				94D24B8E1D4AFE7800C7F33C /* DTCoreText.h in Headers */,
+				1806B4ED1F541DBC005583DE /* CTXGapFillTextAttachment.h in Headers */,
 				94D24B8F1D4AFE7800C7F33C /* DTCompatibility.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2177,6 +2193,7 @@
 				A7B0B56914D9921F0091C2C9 /* NSAttributedString+DTCoreText.h in Headers */,
 				A788C9EA14863E8700E1AFD9 /* NSString+HTML.h in Headers */,
 				A788CA0314863E8700E1AFD9 /* DTColor+Compatibility.h in Headers */,
+				1806B4E51F541DBA005583DE /* CTXGapFillTextAttachment.h in Headers */,
 				A70B4CA01486558200873A4A /* DTCoreText.h in Headers */,
 				A760F54014F56E8E00AD1B0E /* DTImage+HTML.h in Headers */,
 				A7081EA415036460002987F1 /* DTTextBlock.h in Headers */,
@@ -2259,6 +2276,7 @@
 				A79BA6871B46A2530086C2F6 /* DTColor+Compatibility.h in Headers */,
 				A79BA66B1B46A24A0086C2F6 /* NSDictionary+DTCoreText.h in Headers */,
 				A79BA6811B46A24F0086C2F6 /* DTStylesheetHTMLElement.h in Headers */,
+				1806B4EB1F541DBC005583DE /* CTXGapFillTextAttachment.h in Headers */,
 				A79BA6B91B46A2700086C2F6 /* NSString+HTML.h in Headers */,
 				A79BA6731B46A24A0086C2F6 /* DTHTMLParserNode.h in Headers */,
 				A79BA69F1B46A2660086C2F6 /* DTCoreTextLayouter.h in Headers */,
@@ -2320,6 +2338,7 @@
 				A7F7EFC61573603100F5A4D0 /* DTImage+HTML.h in Headers */,
 				A7F7EFC81573603100F5A4D0 /* DTCompatibility.h in Headers */,
 				36F8CE961593590500E9599C /* DTTextBlock.h in Headers */,
+				1806B4E71F541DBB005583DE /* CTXGapFillTextAttachment.h in Headers */,
 				36F8CECF1593AA4200E9599C /* DTHTMLAttributedStringBuilder.h in Headers */,
 				A72D97601684B38B005F8BA5 /* DTCoreTextFunctions.h in Headers */,
 				A73AE7931686FC6A009CF8C3 /* DTHTMLWriter.h in Headers */,
@@ -2361,6 +2380,7 @@
 				E2262DDD1638337D00BFDAD7 /* DTHTMLElement.h in Headers */,
 				E2262DDF1638337D00BFDAD7 /* DTCSSListStyle.h in Headers */,
 				E2262DE11638337D00BFDAD7 /* DTCSSStylesheet.h in Headers */,
+				1806B4E91F541DBB005583DE /* CTXGapFillTextAttachment.h in Headers */,
 				E2262DE41638337D00BFDAD7 /* DTTextAttachment.h in Headers */,
 				E2262DE61638337D00BFDAD7 /* NSString+CSS.h in Headers */,
 				3A4EA52D1D475B2A009222BF /* NSNumber+RomanNumerals.h in Headers */,
@@ -2951,6 +2971,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A788CA5014863EF100E1AFD9 /* CoreTextDemoAppDelegate.m in Sources */,
+				1806B4CE1F541DAC005583DE /* CTXGapFillTextAttachment.m in Sources */,
 				A788CA5114863EF100E1AFD9 /* DemoSnippetsViewController.m in Sources */,
 				4266937E1B56F60D00F9DBFC /* CTLineUtils.m in Sources */,
 				A788CA5214863EF100E1AFD9 /* DemoTextViewController.m in Sources */,
@@ -3005,6 +3026,7 @@
 				94D24B331D4AFE7800C7F33C /* NSAttributedString+HTML.m in Sources */,
 				94D24B341D4AFE7800C7F33C /* NSCharacterSet+HTML.m in Sources */,
 				94D24B351D4AFE7800C7F33C /* DTHTMLParserTextNode.m in Sources */,
+				1806B4EE1F541DBC005583DE /* CTXGapFillTextAttachment.m in Sources */,
 				94D24B361D4AFE7800C7F33C /* DTImage+HTML.m in Sources */,
 				94D24B371D4AFE7800C7F33C /* DTTextBlock.m in Sources */,
 				94D24B381D4AFE7800C7F33C /* DTAccessibilityViewProxy.m in Sources */,
@@ -3080,6 +3102,7 @@
 				A7EB853E168FA33500D686B7 /* DTStylesheetHTMLElement.m in Sources */,
 				A060479616A8B5770000CAA1 /* DTAttributedLabel.m in Sources */,
 				A70E62DB16C24905009B47BF /* DTDictationPlaceholderTextAttachment.m in Sources */,
+				1806B4E61F541DBA005583DE /* CTXGapFillTextAttachment.m in Sources */,
 				A70E62E416C24DDF009B47BF /* DTDictationPlaceholderView.m in Sources */,
 				A700289E16FB220B00AFEDA3 /* DTAnchorHTMLElement.m in Sources */,
 				3A4EA52A1D475B29009222BF /* NSNumber+RomanNumerals.m in Sources */,
@@ -3196,6 +3219,7 @@
 				A79BA68A1B46A2530086C2F6 /* DTImage+HTML.m in Sources */,
 				A79BA6BE1B46A2700086C2F6 /* DTTextBlock.m in Sources */,
 				A7B130581B4B25E30014E109 /* DTAccessibilityViewProxy.m in Sources */,
+				1806B4EC1F541DBC005583DE /* CTXGapFillTextAttachment.m in Sources */,
 				A79BA6B61B46A2700086C2F6 /* NSMutableAttributedString+HTML.m in Sources */,
 				A79BA6981B46A25A0086C2F6 /* DTObjectTextAttachment.m in Sources */,
 				A79BA67A1B46A24F0086C2F6 /* DTAnchorHTMLElement.m in Sources */,
@@ -3265,6 +3289,7 @@
 				A7EB84D1168B9A8500D686B7 /* DTTextAttachmentHTMLElement.m in Sources */,
 				A7EB84DB168B9B1300D686B7 /* DTHorizontalRuleHTMLElement.m in Sources */,
 				A7EB84ED168C657100D686B7 /* DTListItemHTMLElement.m in Sources */,
+				1806B4E81F541DBB005583DE /* CTXGapFillTextAttachment.m in Sources */,
 				A7EB8541168FA33500D686B7 /* DTStylesheetHTMLElement.m in Sources */,
 				A060479816A8B5770000CAA1 /* DTAttributedLabel.m in Sources */,
 				A70E62DC16C24905009B47BF /* DTDictationPlaceholderTextAttachment.m in Sources */,
@@ -3325,6 +3350,7 @@
 				A7EB84EE168C657100D686B7 /* DTListItemHTMLElement.m in Sources */,
 				A70E62DD16C24905009B47BF /* DTDictationPlaceholderTextAttachment.m in Sources */,
 				A70E62FC16C2540C009B47BF /* DTStylesheetHTMLElement.m in Sources */,
+				1806B4EA1F541DBB005583DE /* CTXGapFillTextAttachment.m in Sources */,
 				A70028A016FB220B00AFEDA3 /* DTAnchorHTMLElement.m in Sources */,
 				A762704017155420005F0CEC /* DTCoreTextFontCollection.m in Sources */,
 				A7AE58141725374C00A9BF61 /* DTImageTextAttachment.m in Sources */,
