@@ -509,6 +509,13 @@
 		_currentTag.headerLevel = 6;
 	};
 	[_tagStartHandlers setObject:[h6Block copy] forKey:@"h6"];
+    
+    
+    void (^markBlock)(void) = ^
+    {
+        _currentTag.backgroundColor = [UIColor yellowColor];
+    };
+    [_tagStartHandlers setObject:[markBlock copy] forKey:@"mark"];
 	
 	
 	void (^fontBlock)(void) = ^
@@ -618,13 +625,19 @@
                 objectAttachment.uuid = (_currentTag.attributes[@"key"]?: [[NSUUID UUID] UUIDString]);
                 objectAttachment.content = [[[_currentTag childNodes] firstObject] attributedString];
             }
+            else if([_currentTag.textAttachment isKindOfClass:[CTXHighlightTextAttachment class]])
+            {
+                CTXHighlightTextAttachment *objectAttachment = (CTXHighlightTextAttachment *)_currentTag.textAttachment;
+                
+                objectAttachment.uuid = (_currentTag.attributes[@"key"]?: [[NSUUID UUID] UUIDString]);
+                objectAttachment.content = [[[_currentTag childNodes] firstObject] attributedString];
+            }
 		}
 	};
 	
 	[_tagEndHandlers setObject:[objectBlock copy] forKey:@"object"];
-    [_tagEndHandlers setObject:[objectBlock copy] forKey:@"mark"];
     [_tagEndHandlers setObject:[objectBlock copy] forKey:@"gapfill"];
-    [_tagEndHandlers setObject:[objectBlock copy] forKey:@"m"];
+    [_tagEndHandlers setObject:[objectBlock copy] forKey:@"highlight"];
 
 	void (^videoBlock)(void) = ^
 	{

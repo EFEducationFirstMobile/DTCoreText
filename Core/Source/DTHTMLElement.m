@@ -75,9 +75,8 @@ NSDictionary *_classesForNames = nil;
 	[tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"object"];
 	[tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"video"];
 	[tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"iframe"];
-    [tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"mark"];
     [tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"gapfill"];
-    [tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"m"];
+    [tmpDict setObject:[DTTextAttachmentHTMLElement class] forKey:@"highlight"];
 	
 	_classesForNames = [tmpDict copy];
 }
